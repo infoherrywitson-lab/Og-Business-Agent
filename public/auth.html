@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1120">
+<title>Sign in — Business OS</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css"><script src="/auth.js" defer></script>
+</head>
+<body class="page-auth">
+<div class="auth-shell">
+  <aside class="auth-brand">
+    <a class="brand" href="/"><span class="brand-mark">B</span><span><strong>Business OS</strong><small>AI command center</small></span></a>
+    <div class="auth-brand-copy">
+      <h1>Run the business<br>from <em>one brief.</em></h1>
+      <ul class="auth-points">
+        <li><span>✦</span> Eight specialist agents plan the work</li>
+        <li><span>✓</span> Approvals stay human, always</li>
+        <li><span>≋</span> Every action leaves an audit trail</li>
+      </ul>
+    </div>
+    <div class="orbit orbit-mini" aria-hidden="true">
+      <div class="orbit-ring ring-one"></div>
+      <div class="orbit-ring ring-two"></div>
+      <div class="orbit-core">AI</div>
+      <span class="orbit-node n1">SEO</span><span class="orbit-node n2">WEB</span>
+      <span class="orbit-node n3">ADS</span><span class="orbit-node n4">QA</span>
+    </div>
+    <p class="auth-foot">External actions are approval-gated by design.</p>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <div class="auth-tabs" id="auth-tabs" hidden>
+        <button type="button" data-mode="signin" class="active">Sign in</button>
+        <button type="button" data-mode="setup">Create workspace</button>
+      </div>
+      <span class="kicker" id="auth-kicker">WELCOME BACK</span>
+      <h2 id="auth-title">Sign in to your command center</h2>
+      <p class="auth-sub" id="auth-sub">Use your workspace email and password.</p>
+
+      <form id="auth-form" novalidate>
+        <div class="field" id="field-name" hidden>
+          <label for="auth-name">Your name</label>
+          <input id="auth-name" name="name" type="text" autocomplete="name" maxlength="120" placeholder="e.g. Ayesha Khan">
+        </div>
+        <div class="field">
+          <label for="auth-email">Work email</label>
+          <input id="auth-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@company.com">
+        </div>
+        <div class="field">
+          <label for="auth-password">Password <span id="password-hint" hidden>at least 10 characters</span></label>
+          <input id="auth-password" name="password" type="password" autocomplete="current-password" minlength="10" maxlength="200" required placeholder="••••••••••">
+        </div>
+        <div id="auth-message" class="message error" role="status"></div>
+        <button class="button primary wide" id="auth-submit" type="submit">Sign in</button>
+      </form>
+
+      <p class="auth-alt" id="auth-alt" hidden></p>
+      <a class="auth-back" href="/">← Back to overview</a>
+    </div>
+  </main>
+</div>
+</body></html>

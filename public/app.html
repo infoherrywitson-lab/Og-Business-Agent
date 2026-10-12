@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1120">
+<title>Command center — Business OS</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body class="page-app">
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">B</span><span><strong>Business OS</strong><small>AI command center</small></div></div>
+    <nav>
+      <a class="active" href="#dashboard">▦ &nbsp;Overview</a>
+      <a href="#new-project">✦ &nbsp;Create project</a>
+      <a href="#approvals">✓ &nbsp;Approvals <span id="nav-approval-count" class="nav-count">0</span></a>
+      <a href="#projects">◫ &nbsp;Projects</a>
+      <a href="#team" id="nav-team" hidden>◈ &nbsp;Team</a>
+      <a href="#audit">≋ &nbsp;Audit log</a>
+    </nav>
+    <div class="sidebar-foot"><span class="pulse"></span><span id="sidebar-mode">Connecting…</span></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div><p class="eyebrow" id="topbar-eyebrow">WORKSPACE</p><h1>Business command center</h1></div>
+      <div class="topbar-right">
+        <span class="top-status"><span class="status-dot"></span><span id="connection-status">Checking system…</span></span>
+        <div class="user-chip">
+          <span class="user-avatar" id="user-avatar">·</span>
+          <span class="user-meta"><strong id="user-name">…</strong><small id="user-role">—</small></span>
+          <button class="small-button" id="logout-btn" type="button">Sign out</button>
+        </div>
+      </div>
+    </header>
+
+    <section id="dashboard" class="welcome">
+      <div>
+        <span class="kicker">MULTI-AGENT WORKFLOW</span>
+        <h2>Turn a brief into a<br><em>structured project.</em></h2>
+        <p>Describe your goal in English, Urdu, or Roman Urdu. Review the plan, track work, and keep external actions behind human approval.</p>
+        <a class="button primary" href="#new-project">＋ Create a project</a>
+      </div>
+      <div class="orbit" aria-hidden="true">
+        <div class="orbit-ring ring-one"></div>
+        <div class="orbit-ring ring-two"></div>
+        <div class="orbit-core">AI</div>
+        <span class="orbit-node n1">SEO</span><span class="orbit-node n2">WEB</span>
+        <span class="orbit-node n3">ADS</span><span class="orbit-node n4">QA</span>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card"><span>Projects</span><strong id="stat-projects">0</strong><small>Saved in this workspace</small></article>
+      <article class="stat-card"><span>Planned tasks</span><strong id="stat-tasks">0</strong><small>Across all projects</small></article>
+      <article class="stat-card"><span>Pending approvals</span><strong id="stat-approvals">0</strong><small>Human review required</small></article>
+      <article class="stat-card"><span>Completed tasks</span><strong id="stat-completed">0</strong><small>Marked complete</small></article>
+    </section>
+
+    <section id="new-project" class="panel create-panel">
+      <div class="section-head">
+        <div><span class="kicker">NEW WORKFLOW</span><h2>What do you want to build?</h2><p>Start with one natural-language brief. The planner turns it into agents and tasks.</p></div>
+        <span class="step-pill">01 / BRIEF</span>
+      </div>
+      <form id="project-form">
+        <label for="project-name">Project name <span>optional</span></label>
+        <input id="project-name" maxlength="120" placeholder="e.g. Fusion Kids growth system">
+        <label for="project-prompt">Your instructions</label>
+        <textarea id="project-prompt" minlength="8" maxlength="10000" required placeholder="Mujhy Fusion Kids ke liye mobile-friendly website, SEO plan, product creatives aur 30-day social calendar bana do…"></textarea>
+        <div class="form-foot">
+          <span>Approval required for publishing, ad spend, deployment, and outreach.</span>
+          <button id="create-btn" class="button primary" type="submit">Generate project plan <span>→</span></button>
+        </div>
+        <div id="form-message" role="status" class="message"></div>
+      </form>
+    </section>
+
+    <section id="projects" class="panel">
+      <div class="section-head">
+        <div><span class="kicker">WORKSPACE</span><h2>Recent projects</h2></div>
+        <button id="refresh-btn" class="button secondary" type="button">Refresh ↻</button>
+      </div>
+      <div id="project-list" class="project-list"><div class="empty-state">Loading projects…</div></div>
+    </section>
+
+    <section id="approvals" class="panel">
+      <div class="section-head">
+        <div><span class="kicker">HUMAN IN THE LOOP</span><h2>Approval queue</h2><p>Approving here records a decision; it does not publish or spend money.</p></div>
+        <span class="step-pill" id="approvals-role-pill">—</span>
+      </div>
+      <div id="approval-list" class="approval-list"><div class="empty-state">Loading approvals…</div></div>
+    </section>
+
+    <section id="team" class="panel" hidden>
+      <div class="section-head">
+        <div><span class="kicker">ACCESS CONTROL</span><h2>Team &amp; roles</h2><p>Admins decide approvals and manage access. Members plan and execute tasks. Viewers read only.</p></div>
+        <button id="toggle-user-form" class="button secondary" type="button">＋ Invite member</button>
+      </div>
+      <form id="user-form" class="user-form" hidden>
+        <div class="field-row">
+          <div class="field"><label for="user-name-input">Name</label><input id="user-name-input" maxlength="120" required placeholder="Team member name"></div>
+          <div class="field"><label for="user-email-input">Email</label><input id="user-email-input" type="email" maxlength="254" required placeholder="teammate@company.com"></div>
+          <div class="field"><label for="user-password-input">Temporary password</label><input id="user-password-input" type="password" minlength="10" maxlength="200" required placeholder="At least 10 characters"></div>
+          <div class="field"><label for="user-role-input">Role</label>
+            <select id="user-role-input">
+              <option value="member">member — plan &amp; execute</option>
+              <option value="viewer">viewer — read only</option>
+              <option value="admin">admin — full control</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-foot">
+          <span>The member can change their password after signing in.</span>
+          <button class="button primary" type="submit">Create user <span>→</span></button>
+        </div>
+        <div id="user-form-message" role="status" class="message"></div>
+      </form>
+      <div id="user-list" class="user-list"><div class="empty-state">Loading team…</div></div>
+    </section>
+
+    <section id="audit" class="panel">
+      <div class="section-head">
+        <div><span class="kicker">TRACEABILITY</span><h2>Recent audit events</h2></div>
+      </div>
+      <div id="audit-list" class="audit-list"><div class="empty-state">Loading audit log…</div></div>
+    </section>
+
+    <footer>
+      <span>Business OS · Free-first command center</span>
+      <span>External publishing: disabled by design</span>
+    </footer>
+  </main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>

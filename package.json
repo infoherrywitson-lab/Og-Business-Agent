@@ -1,0 +1,21 @@
+{
+  "name": "business-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready, approval-gated AI Business Operating System — natural-language briefs to multi-agent plans with human-in-the-loop approvals",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "build": "node scripts/build.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
