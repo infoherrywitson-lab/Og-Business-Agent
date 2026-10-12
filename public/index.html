@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1120">
+<title>Business OS — AI Business Command Center</title>
+<meta name="description" content="Turn one natural-language brief in English, Urdu or Roman Urdu into a multi-agent project plan with tasks, deliverables and a human approval queue.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css"><script src="/site.js" defer></script>
+</head>
+<body class="page-landing">
+<header class="site-nav" id="top">
+  <a class="brand" href="/"><span class="brand-mark">B</span><span><strong>Business OS</strong><small>AI command center</small></span></a>
+  <nav class="site-links" id="site-nav">
+    <a href="#features">Features</a>
+    <a href="#workflow">How it works</a>
+    <a href="#safety">Safety</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="site-actions">
+    <a class="button ghost" href="/auth">Sign in</a>
+    <a class="button primary" href="/auth">Create workspace</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy reveal">
+      <span class="kicker">AI BUSINESS COMMAND CENTER</span>
+      <h1>Describe the goal.<br><em>Get the whole plan.</em></h1>
+      <p>Business OS turns a single brief — written in English, Urdu or Roman Urdu — into a saved project with specialist agents, tasks, deliverables and a human approval queue. Nothing publishes, spends or deploys without your say-so.</p>
+      <div class="hero-ctas">
+        <a class="button primary" href="/auth">Create your workspace <span>→</span></a>
+        <a class="button secondary" href="/auth">I already have an account</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>8</strong> specialist agents</li>
+        <li><strong>5</strong> approval gates</li>
+        <li><strong>0</strong> unsupervised external actions</li>
+      </ul>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="orbit" aria-hidden="true">
+        <div class="orbit-ring ring-one"></div>
+        <div class="orbit-ring ring-two"></div>
+        <div class="orbit-core">AI</div>
+        <span class="orbit-node n1">SEO</span>
+        <span class="orbit-node n2">WEB</span>
+        <span class="orbit-node n3">ADS</span>
+        <span class="orbit-node n4">QA</span>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-head"><span class="kicker">PLAN PREVIEW</span><span class="tag warn">approval required</span></div>
+        <ul class="hero-task-list">
+          <li><span class="task-dot in_progress"></span>Define scope <em>Project Analyst</em></li>
+          <li><span class="task-dot queued"></span>Search visibility plan <em>SEO / GEO / AEO</em></li>
+          <li><span class="task-dot queued"></span>30-day content calendar <em>Social Distribution</em></li>
+          <li><span class="task-dot blocked"></span>Campaign budget gates <em>Growth &amp; Lead</em></li>
+        </ul>
+        <div class="hero-card-foot"><span class="tag green">✔ Audit logged</span><span class="tag">Roman Urdu detected</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof-strip reveal" aria-label="Product facts">
+    <div><strong>3</strong><span>input languages</span></div>
+    <div><strong>8</strong><span>specialist agents</span></div>
+    <div><strong>5</strong><span>approval gates</span></div>
+    <div><strong>Every</strong><span>change audited</span></div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="section-head center reveal">
+      <span class="kicker">THE PLATFORM</span>
+      <h2>From a sentence to a<br><em>runnable system.</em></h2>
+      <p>Six building blocks that turn intent into coordinated work — with humans where it matters.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card reveal"><span class="feature-icon">⌘</span><h3>Multi-agent planning</h3><p>Eight specialist agents — Analyst, Research, Website, SEO, Creative, Social, Growth, QA — turn a brief into prioritized tasks with owners.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">✓</span><h3>Human approval queue</h3><p>Social and campaign work lands in a review queue. Admins approve or reject with a note; the decision is recorded, not executed.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">≋</span><h3>Full audit trail</h3><p>Sign-ins, plans, task changes and approval decisions are logged with the acting user and a timestamp you can trace.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">✦</span><h3>AI when you want it</h3><p>Connect any OpenAI-compatible endpoint for AI-assisted plans. No key? The deterministic planner still ships a complete plan.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">◈</span><h3>Roles that mean something</h3><p>Viewers read, members plan and execute tasks, admins decide approvals and manage the team. Enforced on every route.</p></article>
+      <article class="feature-card reveal"><span class="feature-icon">⎔</span><h3>Free-first &amp; self-hostable</h3><p>Built on Node.js built-ins with zero runtime dependencies, atomic local storage and a Supabase schema ready for later.</p></article>
+    </div>
+  </section>
+
+  <section id="workflow" class="section alt">
+    <div class="section-head center reveal">
+      <span class="kicker">HOW IT WORKS</span>
+      <h2>Four steps, start to finish.</h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><span class="step-no">01</span><h3>Write the brief</h3><p>One natural-language request. Business OS detects the language, extracts deliverables and defines acceptance criteria.</p></li>
+      <li class="step reveal"><span class="step-no">02</span><h3>Review the plan</h3><p>Agents, tasks, priorities and safety gates appear instantly as a saved project you can edit and track.</p></li>
+      <li class="step reveal"><span class="step-no">03</span><h3>Approve what matters</h3><p>Publishing, spend, deployment and outreach stay in the queue until an admin explicitly approves them.</p></li>
+      <li class="step reveal"><span class="step-no">04</span><h3>Trace everything</h3><p>Stats, task progress and a searchable audit log show exactly who did what, and when.</p></li>
+    </ol>
+  </section>
+
+  <section id="safety" class="section safety">
+    <div class="safety-copy reveal">
+      <span class="kicker">HUMAN IN THE LOOP</span>
+      <h2>Nothing leaves without<br><em>a person deciding.</em></h2>
+      <p>Business OS is an execution <em>planner</em>, not an autopilot. Every category of irreversible action is approval-gated by design, and approval only records a decision — the external action still requires a connected integration and a second explicit go-ahead.</p>
+      <p>Role-based access control, failed-login lockouts, rate limits, strict content-security policy and an immutable audit log round out the posture.</p>
+      <a class="button secondary" href="/auth">Open the approval queue <span>→</span></a>
+    </div>
+    <ul class="gate-list reveal">
+      <li><span class="gate-lock">🔒</span><div><strong>External publishing</strong><small>Social posts, videos, articles</small></div><span class="tag warn">approval required</span></li>
+      <li><span class="gate-lock">🔒</span><div><strong>Ad spend</strong><small>Budgets, bids, campaigns</small></div><span class="tag warn">approval required</span></li>
+      <li><span class="gate-lock">🔒</span><div><strong>Purchases</strong><small>Tools, assets, services</small></div><span class="tag warn">approval required</span></li>
+      <li><span class="gate-lock">🔒</span><div><strong>Deployment</strong><small>Live site and infra changes</small></div><span class="tag warn">approval required</span></li>
+      <li><span class="gate-lock">🔒</span><div><strong>Bulk outreach</strong><small>Email and messaging at scale</small></div><span class="tag warn">approval required</span></li>
+    </ul>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="section-head center reveal">
+      <span class="kicker">FAQ</span>
+      <h2>Straight answers.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq reveal"><summary>Does Business OS publish, spend or deploy on its own?</summary><p>No. Approving an item records a human decision and nothing more. There are no external integrations wired in by default, and publishing, ad spend, purchases, deployments and bulk outreach are approval-gated by design.</p></details>
+      <details class="faq reveal"><summary>Which languages can I write a brief in?</summary><p>English, Urdu script and Roman Urdu. The planner detects the language and tags it on the saved plan, so mixed-language teams can work from the same workspace.</p></details>
+      <details class="faq reveal"><summary>Do I need an AI API key?</summary><p>No. Without a key, a deterministic rules-based planner produces the full agent/task plan. Add an OpenAI-compatible <code>AI_API_KEY</code> later to get AI-assisted summaries and deliverables — the key stays server-side, never in the browser.</p></details>
+      <details class="faq reveal"><summary>Where does my data live?</summary><p>In a local JSON store written atomically on your own server — one workspace per process. A Supabase schema ships in the repo as the documented path to multi-user, multi-workspace storage.</p></details>
+      <details class="faq reveal"><summary>What does it cost?</summary><p>The core is free-first: Node.js built-ins only, no runtime npm dependencies, no vendor lock-in. The only optional cost is usage on an AI provider you already choose to connect.</p></details>
+    </div>
+  </section>
+
+  <section class="cta-band reveal">
+    <div>
+      <span class="kicker">START HERE</span>
+      <h2>Your next brief deserves<br><em>a real plan.</em></h2>
+      <p>Create a workspace, invite your team, and turn one description into a tracked, approval-gated project in seconds.</p>
+    </div>
+    <div class="hero-ctas">
+      <a class="button primary" href="/auth">Create your workspace <span>→</span></a>
+      <a class="button secondary" href="/auth">Sign in</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span><span class="brand-mark small">B</span> Business OS · Free-first command center</span>
+  <span>External publishing: disabled by design</span>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>
